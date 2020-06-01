@@ -5,6 +5,7 @@ class Author
   end
 
   def posts
+    Post.all {|post| post.author==self}
   end
 
   def add_post(post)
@@ -14,4 +15,9 @@ class Author
   def add_post_by_title(title)
     add_post(Post.new(title))
   end
+
+  def self.post_count
+    Post.all.count
+  end
+  
 end
