@@ -8,4 +8,20 @@ class Artist
     Song.all {|song| song.artist.name==self}
   end
 
+  def add_song(song)
+    song.artist.name=self
+  end
+
+  def add_song_by_name(name)
+    song=Song.new(name)
+    song.artist=self
+  end
+
+  def self.song_count
+    Song.all.count
+    
+  end
+    
+  end
+
 end
