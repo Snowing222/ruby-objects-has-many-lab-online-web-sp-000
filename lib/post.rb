@@ -14,5 +14,5 @@ class Post
     post.author ? post.author.name : nil
   end
 
-  
+
 end
